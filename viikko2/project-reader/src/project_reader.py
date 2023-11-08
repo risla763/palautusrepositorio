@@ -14,4 +14,11 @@ class ProjectReader:
         print(content)
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
-        return Project("Test name", "Test description", [], [])
+        return Project(
+            content['tool']['poetry']['name'],
+            content['tool']['poetry']['description'],
+            content['tool']['poetry']['dependencies'],
+            content['tool']['poetry']['group']['dev']['dependencies'],
+            content['tool']['poetry']['license'],
+            content['tool']['poetry']['authors']
+        )
