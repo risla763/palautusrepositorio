@@ -1,15 +1,12 @@
 [tool.poetry]
-name = "viikko2"
+name = "project-reader"
 version = "0.1.0"
 description = ""
-authors = [" Maija Rislakki < maija.rislakki@helsinki.fi>"]
-readme = "README.md"
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-flask = "^3.0.0"
-pytest = "^7.4.3"
-cowsay = "^6.1"
+toml = "^0.10.2"
 
 
 [build-system]
