@@ -1,0 +1,6 @@
+[FORMAT]
+max-line-length = 80
+[REFACTORING]
+max-nested-blocks = 2
+[BASIC]
+argument-naming-style = snake_case
