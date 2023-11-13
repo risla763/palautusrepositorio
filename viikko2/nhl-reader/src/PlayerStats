@@ -1,0 +1,13 @@
+import requests
+import PlayerReader
+
+class Stats:
+    def __init__(self, reader):
+        self.reader = reader
+
+    def top_scorers_by_nationality(self, nationality):
+        lista = []
+        for player in self.reader.json():
+            if player.nationality() == nationality:
+                lista.append(player)
+        return lista
