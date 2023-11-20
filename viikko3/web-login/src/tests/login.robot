@@ -41,3 +41,9 @@ Create User And Go To Login Page
     Create User  kalle  kalle123
     Go To Login Page
     Login Page Should Be Open
+
+Login With Nonexistent Username  
+    Set Username  moikka
+    Set Password  moroooo333
+    Submit Credentials
+    Login Should Fail With Message  Invalid username or password
