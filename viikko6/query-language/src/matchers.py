@@ -54,15 +54,13 @@ class All:
 
 
 class HasFewerThan:
-    def __init__(self, matcher, value):
-        self._matcher = matcher
+    def __init__(self, value, attr):
         self._value = value
+        self._attr = attr
 
-        def test(self, player):
-            if self._matcher.test(player) < self._value:
-                return True
-            else:
-                return False
+    def test(self, player):
+        player_value = getattr(player, self._attr)
+        return player_value < self._value
 
 
 class Or:
